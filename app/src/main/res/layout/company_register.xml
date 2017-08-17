@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp">
+
+    <EditText
+        android:id="@+id/companyName_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Company Name"
+        android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/industryName_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Industry Name"
+        android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/companyEmail_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Company Email"
+        android:inputType="textEmailAddress" />
+    <EditText
+        android:id="@+id/companyAddress_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/companyCityName_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="City"
+        android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/companyPhoneNumber_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Phone"
+        android:inputType="text|number" />
+    <EditText
+        android:id="@+id/companyLandlineNumber_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="LandLine"
+        android:inputType="text|number" />
+
+</LinearLayout>
