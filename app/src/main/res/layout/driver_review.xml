@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/driver_ImageView"
+        android:layout_width="fill_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        >
+    <ImageView
+        android:id="@+id/employeeImageView"
+        android:layout_width="110dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/transportss"
+        android:layout_centerVertical="true"
+        />
+    <FrameLayout
+        android:id="@+id/employeeImageOutLine"
+        android:layout_width="110dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/white_circle"
+        >
+    </FrameLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+    <RatingBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Leave a comment"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rateDriver_btn"
+        android:text="Rate Driver"/>
+
+
+
+
+</LinearLayout>
