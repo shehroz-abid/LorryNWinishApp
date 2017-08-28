@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_weight="6">
+
+    <TextView
+        android:id="@+id/cancelRideNotification_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:text="Client will be charged ___ as you passed the first 10 min allowance"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Select Cancelation Reason"/>
+    <RadioButton
+        android:id="@+id/noComunication_radio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No Comunication (Selected)"/>
+
+    <RadioButton
+        android:id="@+id/highCharge_radio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="High Charge"/>
+    <RadioButton
+        android:id="@+id/cancelPackage_radio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Canceled the package"/>
+    <RadioButton
+        android:id="@+id/other_radio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Other"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3">
+        <Button
+            android:id="@+id/cancelRide_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/big_button"
+            android:text="OK"/>
+    </LinearLayout>
+</LinearLayout>
+

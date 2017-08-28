@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_screen">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signUp_txt"
+        android:textSize="22sp"
+        android:gravity="center_horizontal"
+        android:textColor="#FFFFFF"
+        android:layout_above="@+id/facebook_signup_btn"
+        android:text="Don't have account. Register now."
+        android:layout_marginBottom="10dp"
+        />
+    <Button
+        android:id="@+id/facebook_signup_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/fb_login"
+        android:layout_above="@+id/google_signup_btn"
+        android:layout_alignLeft="@+id/google_signup_btn"
+        android:layout_alignStart="@+id/google_signup_btn" />
+
+    <Button
+        android:id="@+id/google_signup_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/email_txt"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/google_login"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:id="@+id/view_signup"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#FFFFFF"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/email_txt"
+        android:textColor="#FFFFFF"
+        android:text="Email"
+        android:textSize="20sp"
+        android:layout_above="@+id/loginUserName_editText"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textColor="#FFFFFF"
+        android:id="@+id/password_txt"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/view_signup"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/submit_button" />
+
+
+
+    <TextView
+        android:id="@+id/forgetPasswordTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/login_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp"
+        android:textColor="#FFFFFF"
+        android:text="Forget Password" />
+
+
+    <EditText
+        android:id="@+id/loginPassword_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="52dp"
+        android:ems="10"
+        android:textColor="#FFFFFF"
+        android:hint="Password"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:inputType="textPassword" />
+
+
+    <EditText
+        android:id="@+id/loginUserName_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view_signup"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textColor="#FFFFFF"
+        android:hint="User Name"
+        android:inputType="textPersonName"
+        />
+
+
+
+</RelativeLayout>
