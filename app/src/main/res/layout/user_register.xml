@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <EditText
+        android:id="@+id/firstName_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/name_icon"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/lastName_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/name_icon"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/email_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:drawableLeft="@drawable/email_icon"
+        android:hint="Email"
+        android:inputType="textPassword" />
+    <EditText
+        android:id="@+id/password_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:drawableLeft="@drawable/password_icon"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/cnfrmPassword_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:drawableLeft="@drawable/password_icon"
+        android:hint="Confirm Password"
+        android:inputType="textPassword" />
+    <EditText
+        android:id="@+id/mobileNo_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:drawableLeft="@drawable/mobile_icon"
+        android:hint="Mobile No"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:id="@+id/acceptConditions_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="By requesting you agree to our Term and condition"/>
+
+    </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/create_account_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:textColor="#FFFFFF"
+        android:layout_above="@+id/compnayReg_btn"
+        android:background="@drawable/big_button"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/compnayReg_btn"
+        android:text="Click here if you are company"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/orange_button"
+        />
+
+
+</RelativeLayout>

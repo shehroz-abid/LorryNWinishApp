@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/companyName_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:drawableLeft="@drawable/company_name_icon"
+        android:hint="Company Name"
+        android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/industryName_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:drawableLeft="@drawable/company_name_icon"
+        android:hint="Industry Name"
+        android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/companyEmail_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:drawableLeft="@drawable/email_icon"
+        android:hint="Company Email"
+        android:inputType="textEmailAddress" />
+    <EditText
+        android:id="@+id/companyAddress_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:drawableLeft="@drawable/address_icon"
+        android:hint="Address"
+        android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/companyCityName_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:drawableLeft="@drawable/city_icon"
+        android:hint="City"
+        android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/companyPhoneNumber_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:drawableLeft="@drawable/mobile_icon"
+        android:hint="Phone"
+        android:inputType="text|number" />
+    <EditText
+        android:id="@+id/companyLandlineNumber_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:drawableLeft="@drawable/phone_icon"
+        android:hint="LandLine"
+        android:inputType="text|number" />
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:text="Done"
+        android:gravity="center"
+        android:background="@drawable/big_button"
+        android:layout_above="@+id/progress_bar_img"
+        android:layout_alignLeft="@+id/progress_bar_img"
+        android:layout_alignStart="@+id/progress_bar_img" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#FFFFFF"
+        android:id="@+id/progress_bar_img"
+        android:background="@drawable/two_of_2_progess_bar"
+        android:text="2/2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
