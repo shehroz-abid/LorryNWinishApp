@@ -3,4 +3,22 @@
     <color name="colorPrimary">#000000</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="black_80">#80000000</color>
+    <color name="gray_700">#616161</color>
+    <color name="black_30">#30000000</color>
+    <color name="gray_400_80">#80BDBDBD</color>
+    <color name="colorSecondary">#c92328</color>
+    <color name="colorSecondaryDark">#A21014</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="textColor">#737476</color>
+    <color name="crop__button_bar">#f3f3f3</color>
+    <color name="crop__button_text">#666666</color>
+    <color name="crop__selector_pressed">#1a000000</color>
+    <color name="crop__selector_focused">#77000000</color>
+    <color name="white_50">#50FFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="backgroundColor">#E8E8E0</color>
+    <color name="backgroundColorPress">#DBDBD3</color>
+    <color name="selectPhotoVideoColor">#E6F1F1</color>
 </resources>

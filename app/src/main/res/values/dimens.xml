@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="margin_et_left_right">50dp</dimen>
+    <dimen name="font_size_navigation_title">17sp</dimen>
+    <dimen name="font_size_navigation_button">17sp</dimen>
+    <dimen name="font_size_card_title">15sp</dimen>
+    <dimen name="font_size_card_content">14sp</dimen>
+    <dimen name="font_size_section_large_text">20sp</dimen>
+    <dimen name="font_size_section_small_text">13sp</dimen>
+    <dimen name="font_size_bottom_tab_text">11sp</dimen>
+    <dimen name="font_size_buttons">15sp</dimen>
+    <dimen name="font_size_text_fields">14sp</dimen>
+    <dimen name="font_size_paragraph">15sp</dimen>
+    <dimen name="item_offset">24dp</dimen>
+    <dimen name="design_navigation_icon_size" tools:override="true">30dp</dimen>
+    <dimen name="text_size_default">24sp</dimen>
+</resources>
+
