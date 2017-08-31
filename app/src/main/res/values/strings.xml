@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">LorryNWinsh</string>
-    <string name="pin_content_desc">PIN input field</string>
-    <string name="pin_label_text">PIN</string>
-    <string name="title_activity_display_route">Map</string>
-    <string name="facebook_app_id">351349431972622</string>
-    <string name="fb_login_protocol_scheme">fb351349431972622</string>
-
-</resources>
