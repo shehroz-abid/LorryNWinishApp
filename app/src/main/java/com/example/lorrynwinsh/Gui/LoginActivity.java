@@ -52,8 +52,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         progressbar= new ProgressBar(this);
         callbackManager = CallbackManager.Factory.create();
 
-        loginPassword_editText = (EditText)findViewById(R.id.loginPassword_editText);
-        loginUserName_editText = (EditText)findViewById(R.id.loginUserName_editText);
+        loginPassword_editText = (EditText)findViewById(R.id.etLoginPassword);
+        loginUserName_editText = (EditText)findViewById(R.id.etLoginEmail);
 
         forgetPasswordTxt = (TextView)findViewById(R.id.forgetPasswordTxt);
         signUp_txt = (TextView)findViewById(R.id.signUp_txt);

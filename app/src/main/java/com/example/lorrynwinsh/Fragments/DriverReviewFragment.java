@@ -35,9 +35,9 @@ public class DriverReviewFragment extends Fragment implements View.OnClickListen
         //((MainActivity) getActivity()).hideActionBarSearchEditButton();
 
 
-        driver_ImageView = (ImageView) v.findViewById(R.id.driver_ImageView);
+        driver_ImageView = (ImageView) v.findViewById(R.id.employeeImageView);
 
-        comment_edttxt = (EditText)v.findViewById(R.id.loginPassword_editText);
+//        comment_edttxt = (EditText)v.findViewById(R.id.loginPassword_editText);
 
 
         rateDriver_btn =(Button)v.findViewById(R.id.rateDriver_btn);

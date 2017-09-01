@@ -47,8 +47,8 @@ public class SignInFragment extends Fragment implements View.OnClickListener{
         progressbar= new ProgressBar(getActivity());
         callbackManager = CallbackManager.Factory.create();
 
-        loginPassword_editText = (EditText)v.findViewById(R.id.loginPassword_editText);
-        loginUserName_editText = (EditText)v.findViewById(R.id.loginUserName_editText);
+        loginPassword_editText = (EditText)v.findViewById(R.id.etLoginPassword);
+        loginUserName_editText = (EditText)v.findViewById(R.id.etLoginEmail);
 
         forgetPasswordTxt = (TextView) v.findViewById(R.id.forgetPasswordTxt);
         signUp_txt = (TextView) v.findViewById(R.id.signUp_txt);

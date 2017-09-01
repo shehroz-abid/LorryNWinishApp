@@ -30,7 +30,7 @@ public class UserRegisterFragment extends Fragment {
         //((MainActivity) getActivity()).hideActionBarSearchEditButton();
 
         firstName_editText = (EditText)v.findViewById(R.id.firstName_editText);
-        lastName_editText = (EditText)v.findViewById(R.id.loginUserName_editText);
+//        lastName_editText = (EditText)v.findViewById(R.id.loginUserName_editText);
         email_editText = (EditText)v.findViewById(R.id.email_editText);
         password_editText = (EditText)v.findViewById(R.id.password_editText);
         cnfrmPassword_editText = (EditText)v.findViewById(R.id.cnfrmPassword_editText);
