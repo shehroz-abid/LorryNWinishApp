@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/rootlayout">
+
+    <ImageView
+        android:id="@+id/menu_item_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:src="@drawable/ic_room_black_24dp"
+        />
+    <TextView
+        android:id="@+id/menu_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="32dp"
+        android:fontFamily="sans-serif"
+        android:textSize="15sp"
+        android:gravity="center|left"
+        android:text="Home"
+        android:textColor="@android:color/black"
+        />
+
+</LinearLayout>

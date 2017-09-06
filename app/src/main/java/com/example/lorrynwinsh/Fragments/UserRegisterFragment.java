@@ -10,25 +10,31 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.lorrynwinsh.Gui.RegisterActivity;
 import com.example.lorrynwinsh.R;
 
 /**
  * Created by Shehroz on 16-Aug-17.
  */
 
-public class UserRegisterFragment extends Fragment {
+public class UserRegisterFragment extends Fragment implements View.OnClickListener{
 
     EditText firstName_editText, lastName_editText, email_editText, password_editText, cnfrmPassword_editText, mobileNo_editText;
     Button compnayReg_btn, create_account_btn;
     CheckBox acceptConditions_checkbox;
+
+    public static UserRegisterFragment newInstance(){
+        UserRegisterFragment f = new UserRegisterFragment();
+
+        return f;
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.user_register, container, false);
-        //((MainActivity)getActivity()).setTopBarTitle("Add Education");
-        //((MainActivity) getActivity()).hideActionBarSearchEditButton();
-
+        ((RegisterActivity)getActivity()).toolBarTitleTextView.setText("Register - Basic Info");
         firstName_editText = (EditText)v.findViewById(R.id.firstName_editText);
 //        lastName_editText = (EditText)v.findViewById(R.id.loginUserName_editText);
         email_editText = (EditText)v.findViewById(R.id.email_editText);
@@ -42,13 +48,21 @@ public class UserRegisterFragment extends Fragment {
         compnayReg_btn =(Button)v.findViewById(R.id.compnayReg_btn);
         create_account_btn =(Button)v.findViewById(R.id.create_account_btn);
 
-
-        //Typeface typeface = Typeface.createFromAsset(getActivity().getApplicationContext().getAssets(), "fonts/MindBlue_regular_demo.otf");
-        //login_btn.setTypeface(typeface);
-
+        compnayReg_btn.setOnClickListener(this);
+        create_account_btn.setOnClickListener(this);
 
         return v;
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v == compnayReg_btn){
+            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.main_frameLayout, CompanyRegisterFragment.newInstance(), "UserRegisterFragment").addToBackStack(null).commit();
+        }
+        else if (v == create_account_btn){
+            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.main_frameLayout, PhoneVerificationFragment.newInstance(), "PhoneVerificationFragment").addToBackStack(null).commit();
+        }
     }
 }
 

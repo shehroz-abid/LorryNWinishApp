@@ -45,10 +45,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         setContentView(R.layout.signup_main);
 
-
-        //((MainActivity)getActivity()).setTopBarTitle("Add Education");
-        //((MainActivity) getActivity()).hideActionBarSearchEditButton();
-
         progressbar= new ProgressBar(this);
         callbackManager = CallbackManager.Factory.create();
 
@@ -84,12 +80,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         });*/
         login_btn.setOnClickListener(this);
         fb_signup_btn.setOnClickListener(this);
-        //Typeface typeface = Typeface.createFromAsset(getActivity().getApplicationContext().getAssets(), "fonts/MindBlue_regular_demo.otf");
-        //login_btn.setTypeface(typeface);
-
-
-
-
     }
     private void registerUser(){
         String email = loginUserName_editText.getText().toString().trim();
@@ -128,6 +118,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         }
         // implements your things
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(LoginActivity.this,RegisterOptionsActivity.class);
+        startActivity(i);
+        finish();
     }
 }
 

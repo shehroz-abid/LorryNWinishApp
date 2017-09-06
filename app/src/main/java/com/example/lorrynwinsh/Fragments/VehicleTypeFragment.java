@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import com.example.lorrynwinsh.Gui.MainActivity;
 import com.example.lorrynwinsh.R;
 
 /**
@@ -24,13 +25,18 @@ public class VehicleTypeFragment extends Fragment implements View.OnClickListene
     RelativeLayout type1_layout,type2_layout,type3_layout;
     ImageView check_type1_img, check_type2_img, check_type3_img;
 
+    public static VehicleTypeFragment newInstance(){
+        VehicleTypeFragment f = new VehicleTypeFragment();
+
+        return f;
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.vehicle_type, container, false);
-        //((MainActivity)getActivity()).setTopBarTitle("Add Education");
-        //((MainActivity) getActivity()).hideActionBarSearchEditButton();
+        ((MainActivity)getActivity()).toolBarTitleTextView.setText("Vehicle Type");
 
         vehicle_type_next_btn = (Button) v.findViewById(R.id.vehicle_type_next_btn);
         vehicle_type_cancel_btn = (Button) v.findViewById(R.id.vehicle_type_cancel_btn);
@@ -49,9 +55,6 @@ public class VehicleTypeFragment extends Fragment implements View.OnClickListene
         type2_layout.setOnClickListener(this);
         type3_layout.setOnClickListener(this);
 
-        //Typeface typeface = Typeface.createFromAsset(getActivity().getApplicationContext().getAssets(), "fonts/MindBlue_regular_demo.otf");
-        //login_btn.setTypeface(typeface);
-
         return v;
 
     }
@@ -60,9 +63,11 @@ public class VehicleTypeFragment extends Fragment implements View.OnClickListene
     public void onClick(View v) {
 
         if(v == vehicle_type_next_btn){
-            final FragmentTransaction ft = getFragmentManager().beginTransaction();
-            ft.replace(R.id.fragment_container, new VehicleSubTypeFragment(), "NewFragmentTag");
-            ft.commit();
+//            final FragmentTransaction ft = getFragmentManager().beginTransaction();
+//            ft.replace(R.id.fragment_container, new VehicleSubTypeFragment(), "NewFragmentTag");
+//            ft.commit();
+
+            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, VehicleSubTypeFragment.newInstance(), "VehicleSubTypeFragment").addToBackStack(null).commit();
 
         }
         if(v == vehicle_type_cancel_btn){

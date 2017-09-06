@@ -1,6 +1,5 @@
 package com.example.lorrynwinsh.Gui;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -46,15 +45,15 @@ public class SplashScreen extends AppCompatActivity {
                 btnGetStarted.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        startLoginActivity();
+                        startRegisterOptionsActivity();
                     }
                 });
             }
         }, SPLASH_TIME_OUT);
     }
 
-    private void startLoginActivity(){
-        Intent i = new Intent(SplashScreen.this, LoginActivity.class);
+    private void startRegisterOptionsActivity(){
+        Intent i = new Intent(SplashScreen.this, RegisterOptionsActivity.class);
         startActivity(i);
         finish();
     }

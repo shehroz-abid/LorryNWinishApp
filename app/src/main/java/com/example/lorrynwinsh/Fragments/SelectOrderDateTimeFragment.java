@@ -30,13 +30,17 @@ public class SelectOrderDateTimeFragment extends Fragment implements View.OnClic
 
     DatePickerDialog.OnDateSetListener date;
 
+    public static SelectOrderDateTimeFragment newInstance(){
+        SelectOrderDateTimeFragment f = new SelectOrderDateTimeFragment();
+
+        return f;
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.select_date_time, container, false);
-        //((MainActivity)getActivity()).setTopBarTitle("Add Education");
-        //((MainActivity) getActivity()).hideActionBarSearchEditButton();
 
 
         order_Timepicker = (TimePicker) v.findViewById(R.id.order_Timepicker);

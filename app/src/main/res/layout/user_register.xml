@@ -70,14 +70,19 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="50dp">
         <CheckBox
             android:id="@+id/acceptConditions_checkbox"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            />
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:lines="2"
+            android:maxLines="2"
+            android:gravity="center"
             android:text="By requesting you agree to our Term and condition"/>
 
     </LinearLayout>
@@ -88,6 +93,7 @@
         android:text="Create Account"
         android:textColor="#FFFFFF"
         android:background="@drawable/big_button"
+        android:layout_marginTop="10dp"
         />
     <Button
         android:layout_width="match_parent"

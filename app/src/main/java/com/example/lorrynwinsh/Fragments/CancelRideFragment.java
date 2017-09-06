@@ -26,10 +26,7 @@ public class CancelRideFragment extends Fragment implements View.OnClickListener
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.cancel_ride, container, false);
-        //((MainActivity)getActivity()).setTopBarTitle("Add Education");
-        //((MainActivity) getActivity()).hideActionBarSearchEditButton();
 
         cancelRideNotification_txt = (TextView) v.findViewById(R.id.cancelRideNotification_txt);
 
@@ -40,9 +37,6 @@ public class CancelRideFragment extends Fragment implements View.OnClickListener
 
         cancelRide_btn =(Button)v.findViewById(R.id.cancelRide_btn);
 
-
-        //Typeface typeface = Typeface.createFromAsset(getActivity().getApplicationContext().getAssets(), "fonts/MindBlue_regular_demo.otf");
-        //login_btn.setTypeface(typeface);
 
 
         return v;

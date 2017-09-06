@@ -2,6 +2,7 @@ package com.example.lorrynwinsh.Gui;
 
 
 
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
@@ -9,9 +10,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Base64;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.example.lorrynwinsh.Fragments.UserRegisterFragment;
 import com.example.lorrynwinsh.Fragments.VehicleTypeFragment;
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
@@ -25,14 +31,31 @@ import java.security.NoSuchAlgorithmException;
 
 public class MainActivity extends AppCompatActivity {
 
+    ImageView homeBackButton;
+    public TextView toolBarTitleTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FragmentManager fm = getSupportFragmentManager();
-        VehicleTypeFragment fragment = new VehicleTypeFragment();
-        fm.beginTransaction().add(R.id.fragment_container,fragment).commit();
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar1);
+        setSupportActionBar(toolbar);
+        toolBarTitleTextView = (TextView) toolbar.findViewById(R.id.toolbar1_title_tv);
+        toolBarTitleTextView.setText("Vehicle Type");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+
+        homeBackButton = (ImageView) toolbar.findViewById(R.id.btnBackMenu1);
+        homeBackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
+        if (savedInstanceState == null){
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, VehicleTypeFragment.newInstance(), "VehicleTypeFragment").commit();
+        }
 
         try {
             PackageInfo info = getPackageManager().getPackageInfo(
@@ -48,10 +71,17 @@ public class MainActivity extends AppCompatActivity {
         } catch (NoSuchAlgorithmException e) {
 
         }
-        /*
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        SignInFragment hello = new SignInFragment();
-        fragmentTransaction.add(R.id.fragment_container, hello, "HELLO");*/
-        //fragmentTransaction.commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(getSupportFragmentManager().getBackStackEntryCount() == 0) {
+            Intent i = new Intent(MainActivity.this,RegisterOptionsActivity.class);
+            startActivity(i);
+            finish();
+        }
+        else {
+            getSupportFragmentManager().popBackStack();
+        }
     }
 }

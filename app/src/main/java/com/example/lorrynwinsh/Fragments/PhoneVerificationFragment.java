@@ -10,6 +10,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.lorrynwinsh.Gui.RegisterActivity;
 import com.example.lorrynwinsh.R;
 
 /**
@@ -22,13 +23,18 @@ public class PhoneVerificationFragment extends Fragment implements View.OnClickL
     Button changeNumber_btn, resendCode_btn, verify_btn;
     TextView phoneNumber_txt, welcomeUser_text ;
 
+    public static PhoneVerificationFragment newInstance(){
+        PhoneVerificationFragment f = new PhoneVerificationFragment();
+
+        return f;
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.phone_verification, container, false);
-        //((MainActivity)getActivity()).setTopBarTitle("Add Education");
-        //((MainActivity) getActivity()).hideActionBarSearchEditButton();
+        ((RegisterActivity)getActivity()).toolBarTitleTextView.setText("Verify Mobile Number");
 
         pin_first_edittext = (EditText)v.findViewById(R.id.pin_first_edittext);
         pin_second_edittext = (EditText)v.findViewById(R.id.pin_second_edittext);
@@ -46,10 +52,6 @@ public class PhoneVerificationFragment extends Fragment implements View.OnClickL
         verify_btn =(Button)v.findViewById(R.id.verify_btn);
         verify_btn.setOnClickListener(this);
 
-        //Typeface typeface = Typeface.createFromAsset(getActivity().getApplicationContext().getAssets(), "fonts/MindBlue_regular_demo.otf");
-        //login_btn.setTypeface(typeface);
-
-
         return v;
 
     }
@@ -58,7 +60,7 @@ public class PhoneVerificationFragment extends Fragment implements View.OnClickL
     public void onClick(View v) {
         // implements your things
         if(v == verify_btn){
-
+            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.main_frameLayout, PaymentTypeFragment.newInstance(), "PaymentTypeFragment").addToBackStack(null).commit();
         }
     }
 

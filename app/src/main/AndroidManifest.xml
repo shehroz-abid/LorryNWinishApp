@@ -5,6 +5,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
 
     <application
         android:allowBackup="true"
@@ -27,6 +29,19 @@
         <activity android:name=".Gui.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar"
             ></activity>
+
+        <activity android:name=".Gui.RegisterOptionsActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            ></activity>
+
+        <activity android:name=".Gui.RegisterActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            ></activity>
+
+        <activity android:name=".Gui.EnableGPSActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            ></activity>
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
